@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+*.log
+public/
+.deploy*/
+_site/
+.sass-cache/
+.jekyll-cache/
+Gemfile.lock
+docker-compose.yml
+docker-entrypoint.sh
+Dockerfile

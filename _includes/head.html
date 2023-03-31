@@ -1,0 +1,84 @@
+<title>{{ page.title }}</title>
+
+{% if page.subtitle %}
+  {% assign subtitle = page.subtitle %}
+{% else %}
+  {% assign subtitle = page.content | strip_html | truncatewords: 25 %}
+{% endif %}
+
+<meta name="description" content="{{site.title}} - {{subtitle}}">
+<meta name="keywords" content="art, arte, latitude, rural">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; img-src 'self' data: www.paypal.com www.paypalobjects.com www.google-analytics.com; media-src 'self'; frame-src player.vimeo.com www.youtube.com www.mailchimp.com gallery.autodesk.com; frame-ancestors 'self'; font-src 'self' data: maxcdn.bootstrapcdn.com fonts.googleapis.com fonts.gstatic.com assets.sendinblue.com; style-src 'self' 'unsafe-inline' sibforms.com fonts.googleapis.com maxcdn.bootstrapcdn.com; script-src 'self' ajax.googleapis.com 'unsafe-inline' maxcdn.bootstrapcdn.com fonts.googleapis.com sibforms.com www.googletagmanager.com www.google-analytics.com; base-uri 'self'; form-action 'self' www.mailchimp.com silo.us20.list-manage.com www.paypal.com 76abd233.sibforms.com; connect-src 'self' www.google-analytics.com 76abd233.sibforms.com ">
+
+
+<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/media/favicons/favicon.ico">
+
+{% feed_meta %}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"
+        integrity="sha384-rY/jv8mMhqDabXSo+UCggqKtdmBfd3qC2/KvyTDNQ6PcUJXaxK1tMepoQda4g5vB"
+        crossorigin="anonymous"></script>
+
+{% if page.swipebox %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/swipebox.min.css">
+  <script src="{{ site.baseurl }}/js/jquery.swipebox.min.js"></script>
+{% endif %}
+
+<!-- START - We recommend to place the below code in head tag of your website html  -->
+<style>
+  @font-face {
+    font-display: block;
+    font-family: Roboto;
+    src: url(https://assets.sendinblue.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.sendinblue.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+  }
+
+  @font-face {
+    font-display: fallback;
+    font-family: Roboto;
+    font-weight: 600;
+    src: url(https://assets.sendinblue.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.sendinblue.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+  }
+
+  @font-face {
+    font-display: fallback;
+    font-family: Roboto;
+    font-weight: 700;
+    src: url(https://assets.sendinblue.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.sendinblue.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+  }
+
+  #sib-container input:-ms-input-placeholder {
+    text-align: left;
+    font-family: "Courier New", monospace;
+    color: #ff0583;
+  }
+
+  #sib-container input::placeholder {
+    text-align: left;
+    font-family: "Courier New", monospace;
+    color: #ff0583;
+  }
+
+  #sib-container textarea::placeholder {
+    text-align: left;
+    font-family: "Courier New", monospace;
+    color: #ff0583;
+  }
+</style>
+<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+<!--  END - We recommend to place the above code in head tag of your website html -->
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VE4PHTSLT7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VE4PHTSLT7');
+</script>

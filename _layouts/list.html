@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include head.html %}
+    {% include meta.html %}
+  </head>
+  <body>
+    {% include newsletter-popup.html %}
+    {% include menu.html %}
+    <div class="main-div">
+      <section class="content-text">
+        <h2>{{ page.title }}</h2>
+        {{ content }}
+        {% if page.link and page.link-text %}
+          <a href="{{ site.baseurl }}{{ page.link }}" target="_blank">
+            [ {{ page.link-text }} ]
+          </a>
+        {% endif %}
+      </section>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>
